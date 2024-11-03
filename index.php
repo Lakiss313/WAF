@@ -1,6 +1,3 @@
-
-
-
 <?php
 $servername = "abasswaf.mysql.database.azure.com";
 $username = "Abass@abasswaf";
