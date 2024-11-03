@@ -10,7 +10,7 @@ $conn = mysqli_init();
 #mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL_DONT_VERIFY_SERVER_CERT);
 // Check connection
 echo "Connected successfully";
-#$conn->close();
+$conn->close();
 ?>
 
 <!DOCTYPE html>
