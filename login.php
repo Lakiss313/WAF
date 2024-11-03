@@ -4,17 +4,16 @@ $username = "Abass@abasswaf";
 $password = "lakiss@1@2@3";
 $dbname = "waf";
 
-$conn = mysqli_init();
-mysqli_ssl_set($conn, NULL, NULL, "/home/site/wwwroot/BaltimoreCyberTrustRoot.crt.pem", NULL, NULL);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname, 3306);
 
-if (mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306, NULL, MYSQLI_CLIENT_SSL)) {
-    echo "Connected successfully";
-} else {
-    echo "Connection failed: " . mysqli_connect_error();
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-mysqli_close($conn);
+echo "Connected successfully";
+$conn->close();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
