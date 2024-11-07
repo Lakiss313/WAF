@@ -1,6 +1,6 @@
 <?php
 $servername = "abasswaf.mysql.database.azure.com";
-$username = "Abass@abasswaf";
+$username = "Abass";
 $password = "lakiss@1@2@3";
 $dbname = "waf";
 
